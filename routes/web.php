@@ -14,9 +14,17 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('auth.login');
 });
 
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home')->middleware('auth');
+
+Route::resource('cuentas', App\Http\Controllers\CuentaController::class)->middleware('auth');
+
+Route::resource('bancos', App\Http\Controllers\BancoController::class)->middleware('auth');
+
+Route::resource('ingresoscuentas', App\Http\Controllers\IngresoscuentaController::class)->middleware('auth');
+
+Route::resource('ingresosbancos', App\Http\Controllers\IngresosbancoController::class)->middleware('auth');

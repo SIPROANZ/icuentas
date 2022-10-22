@@ -14,8 +14,8 @@ return [
     |
     */
 
-    'title' => 'AdminLTE 3',
-    'title_prefix' => '',
+    'title' => '',
+    'title_prefix' => 'icuentas | ',
     'title_postfix' => '',
 
     /*
@@ -63,7 +63,7 @@ return [
     |
     */
 
-    'logo' => '<b>Admin</b>LTE',
+    'logo' => '<b>iCuentas</b>APP',
     'logo_img' => 'vendor/adminlte/dist/img/AdminLTELogo.png',
     'logo_img_class' => 'brand-image img-circle elevation-3',
     'logo_img_xl' => null,
@@ -150,8 +150,8 @@ return [
 
     'layout_topnav' => null,
     'layout_boxed' => null,
-    'layout_fixed_sidebar' => null,
-    'layout_fixed_navbar' => null,
+    'layout_fixed_sidebar' => true,
+    'layout_fixed_navbar' => true,
     'layout_fixed_footer' => null,
     'layout_dark_mode' => null,
 
@@ -194,7 +194,7 @@ return [
     'classes_content' => '',
     'classes_sidebar' => 'sidebar-dark-primary elevation-4',
     'classes_sidebar_nav' => '',
-    'classes_topnav' => 'navbar-white navbar-light',
+    'classes_topnav' => 'navbar-primary navbar-light',
     'classes_topnav_nav' => 'navbar-expand',
     'classes_topnav_container' => 'container',
 
@@ -306,83 +306,62 @@ return [
             'type' => 'sidebar-menu-search',
             'text' => 'search',
         ],
+      
+        
+        ['header' => 'Administración'],
+        // CUENTAS
         [
-            'text' => 'blog',
-            'url'  => 'admin/blog',
-            'can'  => 'manage-blog',
-        ],
-        [
-            'text'        => 'pages',
-            'url'         => 'admin/pages',
-            'icon'        => 'far fa-fw fa-file',
-            'label'       => 4,
-            'label_color' => 'success',
-        ],
-        ['header' => 'account_settings'],
-        [
-            'text' => 'profile',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-user',
-        ],
-        [
-            'text' => 'change_password',
-            'url'  => 'admin/settings',
-            'icon' => 'fas fa-fw fa-lock',
-        ],
-        [
-            'text'    => 'multilevel',
-            'icon'    => 'fas fa-fw fa-share',
+            'text'    => 'Cuentas',
+            'icon'    => 'fas fa-fw fa-tasks',
+            'icon_color' => 'pink',
             'submenu' => [
                 [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Cuentas',
+                    'icon'    => 'fas fa-fw fa-tasks',
+                    'icon_color' => 'lightblue',
+                    'route'  => 'cuentas.index',
                 ],
                 [
-                    'text'    => 'level_one',
-                    'url'     => '#',
-                    'submenu' => [
-                        [
-                            'text' => 'level_two',
-                            'url'  => '#',
-                        ],
-                        [
-                            'text'    => 'level_two',
-                            'url'     => '#',
-                            'submenu' => [
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                                [
-                                    'text' => 'level_three',
-                                    'url'  => '#',
-                                ],
-                            ],
-                        ],
-                    ],
-                ],
-                [
-                    'text' => 'level_one',
-                    'url'  => '#',
+                    'text' => 'Ingreso a Cuenta',
+                    'icon'    => 'fas fa-fw fa-plus-circle',
+                    'icon_color' => 'teal',
+                    'route'  => 'ingresoscuentas.index',
                 ],
             ],
         ],
-        ['header' => 'labels'],
+        // BANCOS
         [
-            'text'       => 'important',
-            'icon_color' => 'red',
-            'url'        => '#',
+            'text'    => 'Bancos',
+            'icon'    => 'fas fa-fw fa-university',
+            'icon_color' => 'pink',
+            'submenu' => [
+                [
+                    'text' => 'Bancos',
+                    'icon'    => 'fas fa-fw fa-university',
+                    'icon_color' => 'lightblue',
+                    'route'  => 'bancos.index',
+                ],
+                [
+                    'text' => 'Ingreso a Banco',
+                    'icon'    => 'fas fa-fw fa-plus-circle',
+                    'icon_color' => 'teal',
+                    'route'  => 'ingresosbancos.index',
+                ],
+            ],
         ],
+
+        // PAGOS 
         [
-            'text'       => 'warning',
-            'icon_color' => 'yellow',
-            'url'        => '#',
+            'text'    => 'pagos',
+            'icon'    => 'fas fa-fw fa-donate',
+            'icon_color' => 'pink',
+            'url'  => '#',
+            
         ],
-        [
-            'text'       => 'information',
-            'icon_color' => 'cyan',
-            'url'        => '#',
-        ],
+       
+       
+        
+       
     ],
 
     /*

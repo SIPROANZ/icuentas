@@ -13,11 +13,13 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('cuentas', function (Blueprint $table) {
+        Schema::create('bancos', function (Blueprint $table) {
             $table->id();
+            
             $table->string('nombre', 100);
-            $table->double('montobase', 25, 2);
-            $table->double('montovigente', 25, 2);
+            $table->double('saldo', 25, 2);
+            $table->string('tipocambio', 100);
+
             $table->timestamps();
         });
     }
@@ -29,6 +31,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('cuentas');
+        Schema::dropIfExists('bancos');
     }
 };
