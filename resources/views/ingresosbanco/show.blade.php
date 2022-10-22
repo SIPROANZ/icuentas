@@ -19,7 +19,10 @@
                     </div>
 
                     <div class="card-body">
-                        
+                    <div class="form-group">
+                            <strong>Concepto:</strong>
+                            {{ $ingresosbanco->concepto }}
+                        </div>
                         <div class="form-group">
                             <strong>Monto:</strong>
                             {{ $ingresosbanco->monto }}

@@ -21,6 +21,7 @@ class Ingresosbanco extends Model
 {
     
     static $rules = [
+    'concepto' => 'required',
 		'monto' => 'required',
 		'banco_id' => 'required',
     ];
@@ -32,7 +33,7 @@ class Ingresosbanco extends Model
      *
      * @var array
      */
-    protected $fillable = ['monto','banco_id'];
+    protected $fillable = ['concepto','monto','banco_id'];
 
 
     /**

@@ -21,6 +21,7 @@ class Ingresoscuenta extends Model
 {
     
     static $rules = [
+    'concepto' => 'required',
 		'monto' => 'required',
 		'cuenta_id' => 'required',
     ];
@@ -32,7 +33,7 @@ class Ingresoscuenta extends Model
      *
      * @var array
      */
-    protected $fillable = ['monto','cuenta_id'];
+    protected $fillable = ['concepto','monto','cuenta_id'];
 
 
     /**

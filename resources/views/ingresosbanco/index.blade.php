@@ -36,6 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
+                                        <th>Concepto</th>
 										<th>Monto</th>
 										<th>Nombre del Banco</th>
 
@@ -47,6 +48,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
+                                            <td>{{ $ingresosbanco->concepto }}</td>
 											<td>{{ $ingresosbanco->monto }}</td>
 											<td>{{ $ingresosbanco->banco->nombre }}</td>
 

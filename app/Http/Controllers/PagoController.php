@@ -51,6 +51,15 @@ class PagoController extends Controller
     {
         request()->validate(Pago::$rules);
 
+        //Obtener el id del banco al que voy hacerle un egreso
+        $ingreso_banco = Banco::find($request->banco_id);
+        //Obtener el id de la cuenta al que voy hacerle un egreso
+        $ingreso_cuenta = Cuenta::find($request->cuenta_id);
+
+        //Realizar los respectivos decrementos
+        $ingreso_cuenta->decrement('montovigente', $request->monto);
+        $ingreso_banco->decrement('saldo', $request->monto);
+
         $pago = Pago::create($request->all());
 
         return redirect()->route('pagos.index')

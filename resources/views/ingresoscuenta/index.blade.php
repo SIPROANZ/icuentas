@@ -36,6 +36,7 @@
                                     <tr>
                                         <th>No</th>
                                         
+                                        <th>Concepto</th>
 										<th>Monto</th>
 										<th>Nombre de la cuenta</th>
 
@@ -47,6 +48,7 @@
                                         <tr>
                                             <td>{{ ++$i }}</td>
                                             
+                                            <td>{{ $ingresoscuenta->concepto }}</td>
 											<td>{{ $ingresoscuenta->monto }}</td>
 											<td>{{ $ingresoscuenta->cuenta->nombre }}</td>
 

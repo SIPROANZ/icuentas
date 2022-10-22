@@ -23,6 +23,7 @@ class Pago extends Model
 {
     
     static $rules = [
+        'concepto' => 'required',
 		'monto' => 'required',
 		'banco_id' => 'required',
 		'cuenta_id' => 'required',
@@ -35,7 +36,7 @@ class Pago extends Model
      *
      * @var array
      */
-    protected $fillable = ['monto','banco_id','cuenta_id'];
+    protected $fillable = ['concepto','monto','banco_id','cuenta_id'];
 
 
     /**

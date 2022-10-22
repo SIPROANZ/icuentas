@@ -49,10 +49,16 @@ class IngresoscuentaController extends Controller
     {
         request()->validate(Ingresoscuenta::$rules);
 
+        //Obtener el id de la cuenta al que voy hacerle un ingreso
+        $ingreso_cuenta = Cuenta::find($request->cuenta_id);
+        //Incremento el valor de la cuenta con el monto obtenido del formulario
+        $ingreso_cuenta->increment('montobase', $request->monto);
+        $ingreso_cuenta->increment('montovigente', $request->monto);
+
         $ingresoscuenta = Ingresoscuenta::create($request->all());
 
         return redirect()->route('ingresoscuentas.index')
-            ->with('success', 'Ingresoscuenta created successfully.');
+            ->with('success', 'Se ha realizado un aumenta de la cuenta de manera satisfactoria.');
     }
 
     /**

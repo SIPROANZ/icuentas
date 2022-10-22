@@ -20,6 +20,11 @@
 
                     <div class="card-body">
                         
+                    <div class="form-group">
+                            <strong>Concepto:</strong>
+                            {{ $ingresoscuenta->concepto }}
+                        </div>
+
                         <div class="form-group">
                             <strong>Monto:</strong>
                             {{ $ingresoscuenta->monto }}
