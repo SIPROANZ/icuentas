@@ -49,10 +49,16 @@ class IngresosbancoController extends Controller
     {
         request()->validate(Ingresosbanco::$rules);
 
+        //Obtener el id del banco al que voy hacerle un ingreso
+        $ingreso_banco = Banco::find($request->banco_id);
+
+        //Incremento el valor del banco con el monto obtenido del formulario
+        $ingreso_banco->increment('saldo', $request->monto);
+
         $ingresosbanco = Ingresosbanco::create($request->all());
 
         return redirect()->route('ingresosbancos.index')
-            ->with('success', 'Ingresosbanco created successfully.');
+            ->with('success', 'Se ha generado un ingreso a Banco de manera satisfactoria.');
     }
 
     /**

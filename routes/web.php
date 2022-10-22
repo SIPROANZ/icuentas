@@ -28,3 +28,5 @@ Route::resource('bancos', App\Http\Controllers\BancoController::class)->middlewa
 Route::resource('ingresoscuentas', App\Http\Controllers\IngresoscuentaController::class)->middleware('auth');
 
 Route::resource('ingresosbancos', App\Http\Controllers\IngresosbancoController::class)->middleware('auth');
+
+Route::resource('pagos', App\Http\Controllers\PagoController::class)->middleware('auth');

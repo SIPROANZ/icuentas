@@ -355,7 +355,7 @@ return [
             'text'    => 'pagos',
             'icon'    => 'fas fa-fw fa-donate',
             'icon_color' => 'pink',
-            'url'  => '#',
+            'route'  => 'pagos.index',
             
         ],
        
