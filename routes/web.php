@@ -30,3 +30,7 @@ Route::resource('ingresoscuentas', App\Http\Controllers\IngresoscuentaController
 Route::resource('ingresosbancos', App\Http\Controllers\IngresosbancoController::class)->middleware('auth');
 
 Route::resource('pagos', App\Http\Controllers\PagoController::class)->middleware('auth');
+
+Route::resource('socios', App\Http\Controllers\SocioController::class)->middleware('auth');
+
+// Route::resource('prestamistas', App\Http\Controllers\PrestamistaController::class)->middleware('auth');
