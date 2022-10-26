@@ -33,4 +33,4 @@ Route::resource('pagos', App\Http\Controllers\PagoController::class)->middleware
 
 Route::resource('socios', App\Http\Controllers\SocioController::class)->middleware('auth');
 
-// Route::resource('prestamistas', App\Http\Controllers\PrestamistaController::class)->middleware('auth');
+Route::resource('sociopagos', App\Http\Controllers\SociopagoController::class)->middleware('auth');

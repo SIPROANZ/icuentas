@@ -13,8 +13,17 @@ return new class extends Migration
      */
     public function up()
     {
-        Schema::create('pagos', function (Blueprint $table) {
+        Schema::create('sociopagos', function (Blueprint $table) {
             $table->id();
+            
+            $table->double('monto', 25, 2);
+            
+            $table->string('concepto', 100);
+
+            $table->bigInteger('socio_id')->unsigned();
+
+            $table->foreign('socio_id')->references('id')->on('socios')->onDelete('cascade');
+                
             $table->timestamps();
         });
     }
@@ -26,6 +35,6 @@ return new class extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('pagos');
+        Schema::dropIfExists('sociopagos');
     }
 };

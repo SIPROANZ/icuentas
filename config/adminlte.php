@@ -366,15 +366,15 @@ return [
             'icon_color' => 'pink',
             'route'  => 'socios.index',
             
-        ], /*
-         // PRESTAMISTAAS 
+        ], 
+         // INGRESO PAGO UTILIDAD
          [
-            'text'    => 'prestamistas',
+            'text'    => 'pago utilidad',
             'icon'    => 'fas fa-fw fa-donate',
             'icon_color' => 'pink',
-            'url'  => '#',
+            'route'  => 'sociopagos.index',
             
-        ],*/
+        ],
        
        
         
