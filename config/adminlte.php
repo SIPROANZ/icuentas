@@ -375,6 +375,14 @@ return [
             'route'  => 'sociopagos.index',
             
         ],
+        // INGRESO de capital
+        [
+            'text'    => 'Ingreso de Capital',
+            'icon'    => 'fas fa-fw fa-donate',
+            'icon_color' => 'pink',
+            'route'  => 'ingresoscapitales.index',
+            
+        ],
        
        
         
